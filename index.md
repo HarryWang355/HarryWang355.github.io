@@ -5,12 +5,12 @@ layout: homepage
 ## About Me
 
 I am currently an MSR student in the Robotics Institute at Carnegie Mellon University. I graduated from Brown University
-in 2023 with a B.S. Honors degree in Applied Math - Computer Science, where I had the privilege 
+in 2023 with a Sc. B. Honors degree in Applied Math - Computer Science, where I had the privilege 
 to be advised by Professor [James Tompkin](https://jamestompkin.com/). 
 
 ## Research Interests
 
-- **3D Computer Vision:** reconstruction, generation and manipulation
+- **2D/3D Computer Vision:** reconstruction, generation and manipulation
 
 ## News
 

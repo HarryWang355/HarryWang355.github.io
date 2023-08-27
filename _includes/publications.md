@@ -18,7 +18,7 @@
     <div class="links">
       <a href="https://dl.acm.org/doi/pdf/10.1145/3613451" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Preprint</a>
       <a href="https://github.com/brownvc/Slant-CNN-Biases" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Code</a>
-      <a href="" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">BibTex</a>
+      <a href="https://shorturl.at/frvKU" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Slides</a>
       <strong><i style="color:#e74d3c">Oral Presentation</i></strong>
     </div>
   </div>

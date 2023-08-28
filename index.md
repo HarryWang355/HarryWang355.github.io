@@ -15,8 +15,8 @@ to be advised by Professor [James Tompkin](https://jamestompkin.com/).
 ## News
 
 - **[Aug. 2023]** Started my MSR in Robotics Institute at Carnegie Mellon University.
-- **[Aug. 2023]** Our paper about the human-like biases in CNNs is presented at the ACM Symposium on Applied Perception.
-- **[May. 2023]** Our paper about the human-like biases in CNNs is accepted
+- **[Aug. 2023]** Our paper about the human-like biases in CNNs was presented at the ACM Symposium on Applied Perception.
+- **[May. 2023]** Our paper about the human-like biases in CNNs was accepted
 to an special issue of ACM Transactions on Applied Perception (TAP) 2023.
 - **[May. 2023]** Graduated from Brown University with a B.S Honors degree in Applied Math - Computer Science; won 2023 Brown CS Senior Prizes.
 

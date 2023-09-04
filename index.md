@@ -4,7 +4,8 @@ layout: homepage
 
 ## About Me
 
-I am currently an MSR student in the Robotics Institute at Carnegie Mellon University. I graduated from Brown University
+I am currently an MSR student in the Robotics Institute at Carnegie Mellon University advised by Professor 
+[Fernando De la Torre](https://www.cs.cmu.edu/~ftorre/publications.html). I graduated from Brown University
 in 2023 with a Sc. B. Honors degree in Applied Math - Computer Science, where I had the privilege 
 to be advised by Professor [James Tompkin](https://jamestompkin.com/). 
 

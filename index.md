@@ -15,6 +15,8 @@ to be advised by Professor [James Tompkin](https://jamestompkin.com/).
 
 ## News
 
+- **[Sep. 2024]** Selected as the student volunteer at SIGGRAPH Asia 2024.
+- **[Jul. 2024]** FabricDiffusion on high-fidelity texture transfer for garment generation accepted to SIGGRAPH Asia 2024.
 - **[Aug. 2023]** Started my MSR in Robotics Institute at Carnegie Mellon University.
 - **[Aug. 2023]** Our paper about the human-like biases in CNNs was presented at the ACM Symposium on Applied Perception.
 - **[May. 2023]** Our paper about the human-like biases in CNNs was accepted

@@ -16,16 +16,12 @@
     <div class="author">Cheng Zhang*, <strong>Yuanhao Wang*</strong>, Francisco Vicente, Chenglei Wu, Jinlong Yang, Thabo Beeler, Fernando De la Torre</div>
     <div class="periodical"><em>ACM SIGGRAPH Asia, 2024</em></div>
     <div class="links">
-      <!-- <a href="https://dl.acm.org/doi/full/10.1145/3613451" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;"> -->
-      Paper
-      <!-- </a> -->
+      <a href="https://humansensinglab.github.io/fabric-diffusion/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project</a>
+      <a href="https://arxiv.org/abs/2410.01801" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a>
       <!-- <a href="https://github.com/brownvc/Slant-CNN-Biases" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;"> -->
       Code
       <!-- </a> -->
-      <!-- <a href="https://shorturl.at/frvKU" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;"> -->
-      Video
-      <!-- </a> -->
-      <!-- <strong><i style="color:#e74d3c">Oral Presentation</i></strong> -->
+      <a href="https://www.youtube.com/watch?v=xYiyjwldtWc" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Video</a>
     </div>
   </div>
 </div>

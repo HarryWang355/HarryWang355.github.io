@@ -4,10 +4,7 @@ layout: homepage
 
 ## About Me
 
-I am currently an MSR student in the Robotics Institute at Carnegie Mellon University, where I am a member of [the Human Sensing Lab](http://www.humansensing.cs.cmu.edu/) advised by Professor 
-[Fernando De la Torre](https://www.cs.cmu.edu/~ftorre/publications.html). I graduated from Brown University
-in 2023 with a Sc. B. Honors degree in Applied Math - Computer Science, where I had the privilege 
-to be advised by Professor [James Tompkin](https://jamestompkin.com/). 
+I am a second-year MSR student in the Robotics Institute at Carnegie Mellon University, where I work in the [the Human Sensing Lab](http://www.humansensing.cs.cmu.edu/) under the guidance of Professor [Fernando De la Torre](https://www.cs.cmu.edu/~ftorre/publications.html). I earned my Sc.B. Honors degree in Applied Mathematics – Computer Science from Brown University in 2023, where I had the privilege of being advised by Professor [James Tompkin](https://jamestompkin.com/). 
 
 ## Research Interests
 

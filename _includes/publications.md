@@ -18,12 +18,12 @@
     <div class="author"><strong>Yuanhao Wang</strong>, Cheng Zhang, Goncalo Frazao, Jinlong Yang, Alexandru-Eugen Ichim, Thabo Beeler, Fernando De la Torre</div>
     <div class="periodical"><em>Under Review</em></div>
     <div class="links">
-      <!-- <a href="https://humansensinglab.github.io/fabric-diffusion/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project</a> -->
-      <!-- <a href="https://arxiv.org/abs/2410.01801" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a> -->
-      <!-- <a href="https://github.com/brownvc/Slant-CNN-Biases" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;"> -->
-      <!-- Code -->
-      <!-- </a> -->
-      <!-- <a href="https://www.youtube.com/watch?v=xYiyjwldtWc" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Video</a> -->
+      <a href="https://humansensinglab.github.io/garment-crafter/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project</a>
+      <a href="https://humansensinglab.github.io/garment-crafter/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a>
+      <a href="https://github.com/humansensinglab/garment-crafter" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">
+      Code
+      </a>
+      <a href="https://www.youtube.com/watch?v=ZfRqU_sf2Ko&t=14s" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Video</a>
     </div>
   </div>
 </div>

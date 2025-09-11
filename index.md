@@ -4,14 +4,19 @@ layout: homepage
 
 ## About Me
 
-I am a second-year MSR student in the Robotics Institute at Carnegie Mellon University, where I work in the [the Human Sensing Lab](http://www.humansensing.cs.cmu.edu/) under the guidance of Professor [Fernando De la Torre](https://www.cs.cmu.edu/~ftorre/publications.html). I earned my Sc.B. Honors degree in Applied Mathematics – Computer Science from Brown University in 2023, where I had the privilege of being advised by Professor [James Tompkin](https://jamestompkin.com/). 
+I am a first-year PhD student at the Graphics and Imaging Lab (GRAIL) at the University of Washington, co-advised by Prof. [Steve Seitz](https://www.smseitz.com/) and Prof. [Ira Kemelmacher-Shlizerman](https://www.irakemelmacher.com/).
 
-## Research Interests
+Previously, I was a master student in the Robotics Institute at Carnegie Mellon University, where I work in the [the Human Sensing Lab](http://www.humansensing.cs.cmu.edu/) under the guidance of Prof. [Fernando De la Torre](https://www.cs.cmu.edu/~ftorre/publications.html). I earned my Sc.B. Honors degree in Applied Mathematics – Computer Science from Brown University in 2023, where I was advised by Prof. [James Tompkin](https://jamestompkin.com/). 
 
-- **2D/3D Computer Vision:** reconstruction, generation and manipulation
+<!-- ## Research Interests
+
+- **2D/3D Computer Vision:** reconstruction, generation and manipulation -->
 
 ## News
 
+- **[Sep. 2025]** Started my PhD at University of Washington!
+- **[Jun. 2025]** Started working as a PhD student researcher at Google.
+- **[May. 2025]** Graduated from Carnegie Mellon University with a Master's degree in robotics.
 - **[Sep. 2024]** Selected as the student volunteer at SIGGRAPH Asia 2024.
 - **[Jul. 2024]** FabricDiffusion on high-fidelity texture transfer for garment generation accepted to SIGGRAPH Asia 2024.
 - **[Aug. 2023]** Started my MSR in Robotics Institute at Carnegie Mellon University.

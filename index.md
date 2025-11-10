@@ -14,6 +14,7 @@ Previously, I was a master student in the Robotics Institute at Carnegie Mellon 
 
 ## News
 
+- **[Nov. 2025]** Two papers accepted to 3DV 2026: [GarmentCrafter](https://humansensinglab.github.io/garment-crafter/) (oral) and [SuperHead](https://willydjhuang.github.io/superhead/).
 - **[Sep. 2025]** Started my PhD at University of Washington!
 - **[Jun. 2025]** Started working as a PhD student researcher at Google.
 - **[May. 2025]** Graduated from Carnegie Mellon University with a Master's degree in robotics.

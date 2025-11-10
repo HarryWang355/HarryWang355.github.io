@@ -16,7 +16,7 @@
     <!-- <a href="https://humansensinglab.github.io/fabric-diffusion/">FabricDiffusion: High-Fidelity Texture Transfer for 3D Garments Generation from In-The-Wild Images</a> -->
     </div>
     <div class="author"><strong>Yuanhao Wang</strong>, Cheng Zhang, Goncalo Frazao, Jinlong Yang, Alexandru-Eugen Ichim, Thabo Beeler, Fernando De la Torre</div>
-    <div class="periodical"><em>3DV 2026 <strong>(Oral)</strong></em></div>
+    <div class="periodical"><em><i style="color:#e74d3c">3DV 2026</i><strong>(Oral Presentation)</strong></em></div>
     <div class="links">
       <a href="https://humansensinglab.github.io/garment-crafter/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project</a>
       <a href="https://arxiv.org/pdf/2503.08678" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a>

@@ -36,7 +36,7 @@
     <abbr class="badge">3DV 2026</abbr>
   </div>
 
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+  <div class="col-sm-9" style="position: relative;padding-right: 10px;padding-left: 15px;">
     <div class="title">
     From Blurry to Believable: Enhancing Low-quality Talking Heads with 3D Generative Priors
     <!-- <a href="https://humansensinglab.github.io/fabric-diffusion/">FabricDiffusion: High-Fidelity Texture Transfer for 3D Garments Generation from In-The-Wild Images</a> -->

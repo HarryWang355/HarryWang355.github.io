@@ -5,7 +5,7 @@
 
 <li>
 <div class="pub-row">
-  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 10px;padding-left: 10px;">
     <img src="../assets/img/garment-crafter.png" class="teaser img-fluid z-depth-1">
     <abbr class="badge">3DV 2026</abbr>
   </div>
@@ -31,12 +31,12 @@
 
 <li>
 <div class="pub-row">
-  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 10px;padding-left: 10px;">
     <img src="../assets/img/garment-crafter.png" class="teaser img-fluid z-depth-1">
     <abbr class="badge">3DV 2026</abbr>
   </div>
 
-  <div class="col-sm-9" style="position: relative;padding-right: 10px;padding-left: 15px;">
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
     <div class="title">
     From Blurry to Believable: Enhancing Low-quality Talking Heads with 3D Generative Priors
     <!-- <a href="https://humansensinglab.github.io/fabric-diffusion/">FabricDiffusion: High-Fidelity Texture Transfer for 3D Garments Generation from In-The-Wild Images</a> -->
@@ -57,7 +57,7 @@
 
 <li>
 <div class="pub-row">
-  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 10px;padding-left: 10px;">
     <img src="../assets/img/fabric-diffusion.png" class="teaser img-fluid z-depth-1">
     <abbr class="badge">SIGGRAPH Asia</abbr>
   </div>
@@ -79,7 +79,7 @@
 <li>
 <div class="pub-row">
 
-  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 10px;padding-left: 10px;">
     <img src="../assets/img/tap2023.png" class="teaser img-fluid z-depth-1">
     <abbr class="badge">TAP</abbr>
   </div>

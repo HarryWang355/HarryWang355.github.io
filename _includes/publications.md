@@ -32,6 +32,32 @@
 <li>
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
+    <img src="../assets/img/garment-crafter.png" class="teaser img-fluid z-depth-1">
+    <abbr class="badge">3DV 2026</abbr>
+  </div>
+
+  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+    <div class="title">
+    From Blurry to Believable: Enhancing Low-quality Talking Heads with 3D Generative Priors
+    <!-- <a href="https://humansensinglab.github.io/fabric-diffusion/">FabricDiffusion: High-Fidelity Texture Transfer for 3D Garments Generation from In-The-Wild Images</a> -->
+    </div>
+    <div class="author">Ding-Jiun Huang, <strong>Yuanhao Wang</strong>, Shao-Ji Yuan, Albert Mosella-Montoro, Francisco Vicente Carrasco, Cheng Zhang, Fernando de la Torre</div>
+    <div class="periodical"><em>3DV 2026 </em></div>
+    <div class="links">
+      <a href="https://willydjhuang.github.io/superhead/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Project</a>
+      <a href="https://willydjhuang.github.io/superhead/resources/superhead_main_website.pdf" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Paper</a>
+      <a href="https://willydjhuang.github.io/superhead/" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">
+      Code
+      </a>
+      <!-- <a href="https://www.youtube.com/watch?v=ZfRqU_sf2Ko&t=14s" class="btn btn-sm z-depth-0" role="button" target="_blank" style="font-size:12px;">Video</a> -->
+    </div>
+  </div>
+</div>
+</li>
+
+<li>
+<div class="pub-row">
+  <div class="col-sm-3 abbr" style="position: relative;padding-right: 15px;padding-left: 15px;">
     <img src="../assets/img/fabric-diffusion.png" class="teaser img-fluid z-depth-1">
     <abbr class="badge">SIGGRAPH Asia</abbr>
   </div>

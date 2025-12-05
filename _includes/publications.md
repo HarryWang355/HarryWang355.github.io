@@ -10,7 +10,7 @@
     <abbr class="badge">3DV 2026</abbr>
   </div>
 
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+  <div class="col-sm-9" style="position: relative;padding-right: 5px;padding-left: 20px;">
     <div class="title">
     GarmentCrafter: Progressive Novel View Synthesis for Single-View 3D Garment Reconstruction and Editing
     <!-- <a href="https://humansensinglab.github.io/fabric-diffusion/">FabricDiffusion: High-Fidelity Texture Transfer for 3D Garments Generation from In-The-Wild Images</a> -->
@@ -32,11 +32,11 @@
 <li>
 <div class="pub-row">
   <div class="col-sm-3 abbr" style="position: relative;padding-right: 10px;padding-left: 10px;">
-    <img src="../assets/img/garment-crafter.png" class="teaser img-fluid z-depth-1">
+    <img src="../assets/img/superhead_thumbnail.png" class="teaser img-fluid z-depth-1">
     <abbr class="badge">3DV 2026</abbr>
   </div>
 
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+  <div class="col-sm-9" style="position: relative;padding-right: 5px;padding-left: 20px;">
     <div class="title">
     From Blurry to Believable: Enhancing Low-quality Talking Heads with 3D Generative Priors
     <!-- <a href="https://humansensinglab.github.io/fabric-diffusion/">FabricDiffusion: High-Fidelity Texture Transfer for 3D Garments Generation from In-The-Wild Images</a> -->
@@ -62,7 +62,7 @@
     <abbr class="badge">SIGGRAPH Asia</abbr>
   </div>
 
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+  <div class="col-sm-9" style="position: relative;padding-right: 5px;padding-left: 20px;">
     <div class="title"><a href="https://humansensinglab.github.io/fabric-diffusion/">FabricDiffusion: High-Fidelity Texture Transfer for 3D Garments Generation from In-The-Wild Images</a></div>
     <div class="author">Cheng Zhang*, <strong>Yuanhao Wang*</strong>, Francisco Vicente, Chenglei Wu, Jinlong Yang, Thabo Beeler, Fernando De la Torre</div>
     <div class="periodical"><em>ACM SIGGRAPH Asia, 2024</em></div>
@@ -84,7 +84,7 @@
     <abbr class="badge">TAP</abbr>
   </div>
 
-  <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
+  <div class="col-sm-9" style="position: relative;padding-right: 5px;padding-left: 20px;">
     <div class="title"><a href="https://dl.acm.org/doi/abs/10.1145/3613451">On Human-like Biases in Convolutional Neural Networks for the Perception of Slant from Texture</a></div>
     <div class="author"><strong>Yuanhao Wang</strong>, Qian Zhang, Celine Aubuchon, Jovan Kemp, Fulvio Domini, James Tompkin</div>
     <div class="periodical"><em>ACM Transactions on Applied Perception <strong>(TAP)</strong>, 2023.</em></div>

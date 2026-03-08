@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal website of Yuanhao 'Harry' Wang, PhD Student at the University of Washington.">
+    <title>Yuanhao "Harry" Wang</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Light Mode Variables (Default) */
+        :root {
+            --text-main: #24292e;
+            --text-muted: #586069;
+            --bg-main: #ffffff;
+            --bg-secondary: #f6f8fa;
+            --link-color: #0366d6;
+            --link-hover: #005cc5;
+            --accent: #e74d3c;
+            --accent-transparent: rgba(231, 77, 60, 0.2);
+            --border: #eaecef;
+            --shadow-light: rgba(0, 0, 0, 0.05);
+            --shadow-hover: rgba(0, 0, 0, 0.12);
+        }
+
+        /* Dark Mode Variables */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-main: #c9d1d9;
+                --text-muted: #8b949e;
+                --bg-main: #0d1117;
+                --bg-secondary: #161b22;
+                --link-color: #58a6ff;
+                --link-hover: #79c0ff;
+                --accent: #ff7b72;
+                --accent-transparent: rgba(255, 123, 114, 0.3);
+                --border: #30363d;
+                --shadow-light: rgba(0, 0, 0, 0.2);
+                --shadow-hover: rgba(0, 0, 0, 0.4);
+            }
+        }
+
+        /* --- Micro-Aesthetics --- */
+        
+        /* Custom Text Selection Highlight */
+        ::selection {
+            background: var(--accent-transparent);
+            color: inherit;
+        }
+
+        /* Custom Minimalist Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--border); 
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--text-muted); 
+        }
+
+        /* --- Scroll Reveal Animation --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+            background-color: var(--bg-main);
+            line-height: 1.6;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: var(--link-hover);
+        }
+
+        h1, h2, h3 {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 8px;
+            margin-top: 40px;
+            font-weight: 600;
+        }
+
+        /* Header & Avatar Layout */
+        header {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .avatar {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid var(--border);
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px var(--shadow-light);
+            transition: transform 0.3s ease;
+        }
+
+        .avatar:hover {
+            transform: scale(1.02);
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        h1 {
+            border-bottom: none;
+            margin-top: 0;
+            font-size: 2.5em;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .links-bar a {
+            margin-right: 15px;
+            font-weight: 500;
+        }
+
+        /* Scrollable News Section */
+        .news-box {
+            max-height: 220px;
+            overflow-y: auto;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 15px 20px;
+            background-color: var(--bg-secondary);
+            scrollbar-width: thin;
+            scrollbar-color: var(--border) transparent;
+        }
+
+        .news-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .news-list li {
+            margin-bottom: 12px;
+            font-size: 0.95em;
+        }
+
+        .news-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .news-date {
+            font-weight: 600;
+            margin-right: 8px;
+            color: var(--text-main);
+        }
+
+        /* Experience Layout */
+        .experience {
+            display: flex;
+            margin-bottom: 25px;
+            align-items: flex-start;
+        }
+
+        .exp-logo {
+            flex: 0 0 50px;
+            margin-right: 20px;
+            margin-top: 2px;
+        }
+
+        .exp-logo img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            padding: 8px;
+            background: #ffffff;
+            box-sizing: border-box;
+            box-shadow: 0 2px 6px var(--shadow-light);
+        }
+
+        .exp-info {
+            flex: 1;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+
+        .exp-company {
+            font-weight: 600;
+            font-size: 1.15em;
+            color: var(--text-main);
+            line-height: 1.2;
+        }
+
+        .exp-date {
+            font-size: 0.95em;
+            color: var(--text-muted);
+            text-align: right;
+            white-space: nowrap;
+            margin-left: 15px;
+        }
+
+        .exp-title {
+            font-weight: 500;
+            font-size: 1.05em;
+            margin-bottom: 4px;
+        }
+
+        .exp-meta {
+            font-size: 0.95em;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Publications Layout */
+        .publication {
+            display: flex;
+            margin-bottom: 35px;
+            align-items: center;
+        }
+
+        .pub-image {
+            flex: 0 0 200px;
+            margin-right: 25px;
+            position: relative;
+        }
+
+        .pub-image img {
+            width: 100%;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 12px var(--shadow-light);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .publication:hover .pub-image img {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px var(--shadow-hover);
+        }
+
+        .pub-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--text-main);
+            color: var(--bg-main);
+            padding: 3px 10px;
+            font-size: 0.75em;
+            border-radius: 12px;
+            font-weight: 600;
+            box-shadow: 0 2px 6px var(--shadow-light);
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .pub-info {
+            flex: 1;
+        }
+
+        .pub-title {
+            font-weight: 600;
+            font-size: 1.1em;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .pub-authors {
+            font-size: 0.95em;
+            margin-bottom: 6px;
+        }
+
+        .pub-venue {
+            font-size: 0.95em;
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 12px;
+        }
+
+        .pub-links a {
+            display: inline-block;
+            border: 1px solid var(--border);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 500;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            color: var(--text-main);
+            background: var(--bg-secondary);
+            transition: all 0.2s ease;
+        }
+
+        .pub-links a:hover {
+            background: var(--text-main);
+            color: var(--bg-main);
+            text-decoration: none;
+            border-color: var(--text-main);
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            font-size: 0.9em;
+            color: var(--text-muted);
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+            .publication {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .pub-image {
+                margin-bottom: 15px;
+                width: 100%;
+                max-width: 300px;
+            }
+            .experience {
+                flex-direction: column;
+            }
+            .exp-logo {
+                margin-bottom: 15px;
+            }
+            .exp-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .exp-date {
+                text-align: left;
+                margin-left: 0;
+                margin-bottom: 4px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="reveal">
+        <img src="assets/img/avatar.png" alt="Yuanhao Wang" class="avatar">
+        <div class="header-text">
+            <h1>Yuanhao "Harry" Wang</h1>
+            <div class="subtitle">PhD Student, University of Washington</div>
+            <div class="links-bar">
+                <a href="mailto:yuanhao4@cs.washington.edu">Email</a>
+                <a href="assets/files/Yuanhao_Wang.pdf" target="_blank">CV</a>
+                <a href="https://scholar.google.com/citations?hl=en&authuser=2&user=Z-czOywAAAAJ" target="_blank">Google Scholar</a>
+                <a href="https://github.com/HarryWang355" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/yuanhao-harry-wang-5504041a1/" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="reveal">
+        <h2>About Me</h2>
+        <p>I am a first-year PhD student at the Graphics and Imaging Lab (GRAIL) at the University of Washington, co-advised by Prof. <a href="https://www.smseitz.com/">Steve Seitz</a> and Prof. <a href="https://www.irakemelmacher.com/">Ira Kemelmacher-Shlizerman</a>.</p>
+        <p>Previously, I was a master student in the Robotics Institute at Carnegie Mellon University, where I worked in the <a href="http://www.humansensing.cs.cmu.edu/">Human Sensing Lab</a> under the guidance of Prof. <a href="https://www.cs.cmu.edu/~ftorre/publications.html">Fernando De la Torre</a>. I earned my Sc.B. Honors degree in Applied Mathematics – Computer Science from Brown University in 2023, where I was advised by Prof. <a href="https://jamestompkin.com/">James Tompkin</a>.</p>
+    </section>
+
+    <section class="reveal">
+        <h2>News</h2>
+        <div class="news-box">
+            <ul class="news-list">
+                <li><span class="news-date">[Nov. 2025]</span> Two papers accepted to 3DV 2026: <a href="https://humansensinglab.github.io/garment-crafter/">GarmentCrafter</a> (oral) and <a href="https://willydjhuang.github.io/superhead/">SuperHead</a>.</li>
+                <li><span class="news-date">[Sep. 2025]</span> Started my PhD at University of Washington!</li>
+                <li><span class="news-date">[Jun. 2025]</span> Started working as a PhD student researcher at Google.</li>
+                <li><span class="news-date">[May. 2025]</span> Graduated from Carnegie Mellon University with a Master's degree in robotics.</li>
+                <li><span class="news-date">[Sep. 2024]</span> Selected as the student volunteer at SIGGRAPH Asia 2024.</li>
+                <li><span class="news-date">[Jul. 2024]</span> FabricDiffusion on high-fidelity texture transfer for garment generation accepted to SIGGRAPH Asia 2024.</li>
+                <li><span class="news-date">[Aug. 2023]</span> Started my MSR in Robotics Institute at Carnegie Mellon University.</li>
+                <li><span class="news-date">[Aug. 2023]</span> Our paper about the human-like biases in CNNs was presented at the ACM Symposium on Applied Perception.</li>
+                <li><span class="news-date">[May. 2023]</span> Our paper about the human-like biases in CNNs was accepted to a special issue of ACM Transactions on Applied Perception (TAP) 2023.</li>
+                <li><span class="news-date">[May. 2023]</span> Graduated from Brown University with a B.S Honors degree in Applied Math - Computer Science; won 2023 Brown CS Senior Prizes.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="reveal">
+        <h2>Experience</h2>
+        <div class="experience">
+            <div class="exp-logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo">
+            </div>
+            <div class="exp-info">
+                <div class="exp-header">
+                    <div class="exp-company">Google Research</div>
+                    <div class="exp-date">June 2025 &ndash; Present</div>
+                </div>
+                <div class="exp-title">Student Researcher</div>
+                <div class="exp-meta">Team: Apparel ML <br> Mentor: Ira Kemelmacher-Shlizerman</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="reveal">Publications</h2>
+
+        <div class="publication reveal">
+            <div class="pub-image">
+                <img src="assets/img/garment-crafter.png" alt="GarmentCrafter teaser">
+                <span class="pub-badge">3DV 2026</span>
+            </div>
+            <div class="pub-info">
+                <div class="pub-title">GarmentCrafter: Progressive Novel View Synthesis for Single-View 3D Garment Reconstruction and Editing</div>
+                <div class="pub-authors"><strong>Yuanhao Wang</strong>, Cheng Zhang, Goncalo Frazao, Jinlong Yang, Alexandru-Eugen Ichim, Thabo Beeler, Fernando De la Torre</div>
+                <div class="pub-venue">3DV 2026 <span class="highlight">(Oral, Best Paper Candidate)</span></div>
+                <div class="pub-links">
+                    <a href="https://humansensinglab.github.io/garment-crafter/">Project</a>
+                    <a href="https://arxiv.org/pdf/2503.08678">Paper</a>
+                    <a href="https://github.com/humansensinglab/garment-crafter">Code</a>
+                    <a href="https://www.youtube.com/watch?v=ZfRqU_sf2Ko&t=14s">Video</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication reveal">
+            <div class="pub-image">
+                <img src="assets/img/superhead_thumbnail.png" alt="SuperHead teaser">
+                <span class="pub-badge">3DV 2026</span>
+            </div>
+            <div class="pub-info">
+                <div class="pub-title">From Blurry to Believable: Enhancing Low-quality Talking Heads with 3D Generative Priors</div>
+                <div class="pub-authors">Ding-Jiun Huang, <strong>Yuanhao Wang</strong>, Shao-Ji Yuan, Albert Mosella-Montoro, Francisco Vicente Carrasco, Cheng Zhang, Fernando de la Torre</div>
+                <div class="pub-venue">3DV 2026</div>
+                <div class="pub-links">
+                    <a href="https://willydjhuang.github.io/superhead/">Project</a>
+                    <a href="https://willydjhuang.github.io/superhead/resources/superhead_main_website.pdf">Paper</a>
+                    <a href="https://willydjhuang.github.io/superhead/">Code</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication reveal">
+            <div class="pub-image">
+                <img src="assets/img/fabric-diffusion.png" alt="FabricDiffusion teaser">
+                <span class="pub-badge">SIGGRAPH Asia</span>
+            </div>
+            <div class="pub-info">
+                <div class="pub-title">FabricDiffusion: High-Fidelity Texture Transfer for 3D Garments Generation from In-The-Wild Images</div>
+                <div class="pub-authors">Cheng Zhang*, <strong>Yuanhao Wang*</strong>, Francisco Vicente, Chenglei Wu, Jinlong Yang, Thabo Beeler, Fernando De la Torre</div>
+                <div class="pub-venue">ACM SIGGRAPH Asia, 2024</div>
+                <div class="pub-links">
+                    <a href="https://humansensinglab.github.io/fabric-diffusion/">Project</a>
+                    <a href="https://arxiv.org/abs/2410.01801">Paper</a>
+                    <a href="https://github.com/humansensinglab/fabric-diffusion">Code</a>
+                    <a href="https://www.youtube.com/watch?v=xYiyjwldtWc">Video</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="publication reveal">
+            <div class="pub-image">
+                <img src="assets/img/tap2023.png" alt="TAP 2023 teaser">
+                <span class="pub-badge">TAP</span>
+            </div>
+            <div class="pub-info">
+                <div class="pub-title">On Human-like Biases in Convolutional Neural Networks for the Perception of Slant from Texture</div>
+                <div class="pub-authors"><strong>Yuanhao Wang</strong>, Qian Zhang, Celine Aubuchon, Jovan Kemp, Fulvio Domini, James Tompkin</div>
+                <div class="pub-venue">ACM Transactions on Applied Perception (TAP), 2023. <span class="highlight">(Oral Presentation)</span></div>
+                <div class="pub-links">
+                    <a href="https://dl.acm.org/doi/full/10.1145/3613451">Paper</a>
+                    <a href="https://github.com/brownvc/Slant-CNN-Biases">Code</a>
+                    <a href="https://shorturl.at/frvKU">Slides</a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="reveal">
+        <p><a href="https://clustrmaps.com/site/1c4tn" target="_blank" style="color: inherit; text-decoration: none;">&copy;</a> 2026 Yuanhao "Harry" Wang. Last updated: March 2026.</p>
+        
+        <div style="opacity: 0; position: absolute; width: 1px; height: 1px; overflow: hidden; pointer-events: none;">
+            <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=79QY96VgReeBdwJ-LAWVYZK4yB1I-JGvR_3rRS6NPcQ&cl=ffffff&w=a"></script>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target); 
+                    }
+                });
+            }, observerOptions);
+
+            const revealElements = document.querySelectorAll('.reveal');
+            revealElements.forEach(el => observer.observe(el));
+        });
+    </script>
+
+</body>
+</html>

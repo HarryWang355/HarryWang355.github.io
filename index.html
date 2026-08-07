@@ -8,7 +8,10 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+    <link rel="preload" as="image" href="assets/img/avatar-280.webp">
 
     <style>
         /* Light Mode Variables (Default) */
@@ -256,6 +259,8 @@
             display: flex;
             margin-bottom: 35px;
             align-items: center;
+            content-visibility: auto;
+            contain-intrinsic-size: 280px;
         }
 
         .pub-image {
@@ -394,7 +399,7 @@
 <body>
 
     <header class="reveal">
-        <img src="assets/img/avatar.png" alt="Yuanhao Wang" class="avatar">
+        <img src="assets/img/avatar-280.webp" alt="Yuanhao Wang" class="avatar" width="140" height="140" decoding="async" fetchpriority="high">
         <div class="header-text">
             <h1>Yuanhao "Harry" Wang</h1>
             <div class="subtitle">PhD Student, University of Washington</div>
@@ -437,7 +442,7 @@
         <h2>Experience</h2>
         <div class="experience">
             <div class="exp-logo">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" alt="Google Logo" loading="lazy" decoding="async" width="50" height="50" referrerpolicy="no-referrer">
             </div>
             <div class="exp-info">
                 <div class="exp-header">
@@ -455,7 +460,7 @@
 
         <div class="publication reveal">
             <div class="pub-image">
-                <img src="assets/img/omnifabric.jpg" alt="OmniFabric: Coherent UV Space Texture Synthesis teaser">
+                <img src="assets/img/omnifabric-600.webp" alt="OmniFabric: Coherent UV Space Texture Synthesis teaser" loading="lazy" decoding="async" fetchpriority="low" width="1972" height="1393">
                 <span class="pub-badge">SIGGRAPH Asia 2026</span>
             </div>
             <div class="pub-info">
@@ -472,7 +477,7 @@
 
         <div class="publication reveal">
             <div class="pub-image">
-                <img src="assets/img/fit-vto.jpg" alt="FIT: Fit-Aware Virtual Try-On teaser">
+                <img src="assets/img/fit-vto-600.webp" alt="FIT: Fit-Aware Virtual Try-On teaser" loading="lazy" decoding="async" fetchpriority="low" width="2500" height="1219">
                 <span class="pub-badge">SIGGRAPH 2026</span>
             </div>
             <div class="pub-info">
@@ -490,7 +495,7 @@
 
         <div class="publication reveal">
             <div class="pub-image">
-                <img src="assets/img/garment-crafter.png" alt="GarmentCrafter teaser">
+                <img src="assets/img/garment-crafter-600.webp" alt="GarmentCrafter teaser" loading="lazy" decoding="async" fetchpriority="low" width="2277" height="1224">
                 <span class="pub-badge">3DV 2026</span>
             </div>
             <div class="pub-info">
@@ -508,7 +513,7 @@
 
         <div class="publication reveal">
             <div class="pub-image">
-                <img src="assets/img/superhead_thumbnail.png" alt="SuperHead teaser">
+                <img src="assets/img/superhead-thumbnail-600.webp" alt="SuperHead teaser" loading="lazy" decoding="async" fetchpriority="low" width="2414" height="1770">
                 <span class="pub-badge">3DV 2026</span>
             </div>
             <div class="pub-info">
@@ -525,7 +530,7 @@
 
         <div class="publication reveal">
             <div class="pub-image">
-                <img src="assets/img/fabric-diffusion.png" alt="FabricDiffusion teaser">
+                <img src="assets/img/fabric-diffusion-600.webp" alt="FabricDiffusion teaser" loading="lazy" decoding="async" fetchpriority="low" width="640" height="365">
                 <span class="pub-badge">SIGGRAPH Asia</span>
             </div>
             <div class="pub-info">
@@ -543,7 +548,7 @@
 
         <div class="publication reveal">
             <div class="pub-image">
-                <img src="assets/img/tap2023.png" alt="TAP 2023 teaser">
+                <img src="assets/img/tap2023-600.webp" alt="TAP 2023 teaser" loading="lazy" decoding="async" fetchpriority="low" width="1528" height="1122">
                 <span class="pub-badge">TAP</span>
             </div>
             <div class="pub-info">
@@ -563,9 +568,7 @@
     <footer class="reveal">
         <p><a href="https://clustrmaps.com/site/1c4tn" target="_blank" style="color: inherit; text-decoration: none;">&copy;</a> 2026 Yuanhao "Harry" Wang. Last updated: April 2026.</p>
         
-        <div style="opacity: 0; position: absolute; width: 1px; height: 1px; overflow: hidden; pointer-events: none;">
-            <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=79QY96VgReeBdwJ-LAWVYZK4yB1I-JGvR_3rRS6NPcQ&cl=ffffff&w=a"></script>
-        </div>
+        <div id="clustrmaps-anchor" style="opacity: 0; position: absolute; width: 1px; height: 1px; overflow: hidden; pointer-events: none;"></div>
     </footer>
 
     <script>
@@ -587,6 +590,26 @@
 
             const revealElements = document.querySelectorAll('.reveal');
             revealElements.forEach(el => observer.observe(el));
+        });
+
+        window.addEventListener('load', () => {
+            const loadClustrmaps = () => {
+                if (document.getElementById('clustrmaps')) return;
+                const anchor = document.getElementById('clustrmaps-anchor');
+                if (!anchor) return;
+                const script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.id = 'clustrmaps';
+                script.src = '//clustrmaps.com/map_v2.js?d=79QY96VgReeBdwJ-LAWVYZK4yB1I-JGvR_3rRS6NPcQ&cl=ffffff&w=a';
+                script.async = true;
+                anchor.appendChild(script);
+            };
+
+            if ('requestIdleCallback' in window) {
+                requestIdleCallback(loadClustrmaps, { timeout: 5000 });
+            } else {
+                setTimeout(loadClustrmaps, 2500);
+            }
         });
     </script>
 
